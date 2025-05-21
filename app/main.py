@@ -3,10 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from app.api import analysis, reports
 import os
-from dotenv import load_dotenv
-hf = os.getenv("HF_TOKEN")
-MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
-load_dotenv()
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

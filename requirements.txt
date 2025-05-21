@@ -6,3 +6,4 @@ faiss-cpu
 sentence-transformers 
 openai
 reportlab
+langchain-community>=0.0.30

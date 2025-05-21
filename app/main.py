@@ -118,7 +118,7 @@ app = FastAPI(
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Adjust this in production!
+    allow_origins=["https://healthcheck-fastapi.onrender.com/"],  # Adjust this in production!
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

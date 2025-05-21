@@ -20,7 +20,7 @@ async def lifespan(app: FastAPI):
     # --- Load on Startup ---
     embedding_model = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
-        model_kwargs={"use_auth_token":hf}
+        model_kwargs={"use_auth_token":HF_TOKEN}
     )
 
     vectorstore = FAISS.load_local(
@@ -31,7 +31,7 @@ async def lifespan(app: FastAPI):
 
     llm = ChatOpenAI(
         base_url="https://api.mistral.ai/v1",
-        api_key=MISTRAL_API_KEY,
+        api_key=Mistral_API_KEY,
         model_name="mistral-medium"
     )
 
